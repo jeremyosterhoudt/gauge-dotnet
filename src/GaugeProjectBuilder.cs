@@ -92,7 +92,7 @@ namespace Gauge.Dotnet
 
         private static string GetArch()
         {
-            return RuntimeInformation.ProcessArchitecture.ToString().ToLower();
+            return Environment.Is64BitOperatingSystem ? "x64" : "x86";
         }
 
     }
